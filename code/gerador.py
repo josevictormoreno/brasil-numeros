@@ -1,28 +1,28 @@
-import util
+from util import Util
+from menu import Colors
+from menu import Menu
 
 class GeradorCsv:
-  RED = "\033[1;31m"  
-  BLUE = "\033[1;34m"
-  CYAN = "\033[1;36m"
-  GREEN = "\033[0;32m"
-  RESET = "\033[0;0m"
-  BOLD = "\033[;1m"
-  REVERSE = "\033[;7m"
+  util = Util()
+  menu = Menu()
 
   def start(self):
-    util.clear()
-    print(self.BLUE + '-_-*-_-*-_-*-_-_-*-_-*-_-*-_' + self.GREEN + ' Gerador CSV ' +self.BLUE +'-_-*-_-*-_-*-_-_-*-_-*-_-*-_' + self.RESET)
-    self.getYears()
+    self.menu.reset()
+    self.menu.main_menu()
+    self.input_data()
+  
+  def input_data(self):
+    op = int(input())
 
-  def getYears(self):
-    firstYear = int(input("Informe o ano inicial: ")) 
-    lastYear = int(input("Informe o ano final: ")) 
-    result = ''
-    for x in range(firstYear, lastYear):
-      result = result + str(x) + ', '
+    if op == 1:
+      self.menu.reset()
+      self.util.get_years()
 
-    result = result + lastYear
-    print(result)
-
+    elif op == 0:
+      return
+    
+  def set_file(self):
+    print("gerar arquivo com saida csv")
+    
 gerador = GeradorCsv()
 gerador.start()

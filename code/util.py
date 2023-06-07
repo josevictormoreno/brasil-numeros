@@ -1,7 +1,26 @@
 import os
-# Limpa a tela do terminal
-def clear():
-    if os.name == 'posix':  # Para sistemas baseados em Unix (Linux, macOS)
-        os.system('clear')
-    elif os.name == 'nt':  # Para Windows
-        os.system('cls')
+
+class Util:
+  
+  def clear(self):
+    if os.name == 'posix':
+      os.system('clear')
+    elif os.name == 'nt':
+      os.system('cls')
+
+  def get_years(self):
+    first_year = int(input("Informe o ano inicial: "))
+    last_year = int(input("Informe o ano final: "))
+    result = ''
+    for x in range(first_year, last_year):
+        result = result + str(x) + ','
+
+    result = result + str(last_year)
+    print(result)
+    self.get_counter()
+
+  def get_counter(self):
+    years_str = str(input("Informe o array de anos: "))
+    years_list = years_str.split(",")
+    years_list = [int(year.strip()) for year in years_list]
+    print(years_list)

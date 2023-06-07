@@ -1,2 +1,3 @@
 *.js
 code/__pycache__/*
+.vscode/*
