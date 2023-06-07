@@ -15,12 +15,16 @@ class Util:
     for x in range(first_year, last_year):
         result = result + str(x) + ','
 
-    result = result + str(last_year)
-    print(result)
-    self.get_counter()
+    result = result + str(last_year) + "\n"
+    return result
 
   def get_counter(self):
     years_str = str(input("Informe o array de anos: "))
     years_list = years_str.split(",")
     years_list = [int(year.strip()) for year in years_list]
     print(years_list)
+
+  def get_label(self):
+    labels_str = str(input("Informe os labels: "))
+    labels_str = labels_str + ','
+    return labels_str

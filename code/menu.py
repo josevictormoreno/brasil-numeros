@@ -5,14 +5,12 @@ class Menu:
 
   def reset(self):
     self.util.clear()
-    print(Colors.BLUE + '-_-*-_-*-_-*-_-_-*-_-*-_-*-_' + Colors.GREEN + ' Gerador CSV ' + Colors.BLUE +'-_-*-_-*-_-*-_-_-*-_-*-_-*-_' + Colors.RESET)
+    print(Colors.BLUE + '-._.-*-._.-*-._.-*-._.-*-._.-*' + Colors.GREEN + ' Gerador CSV ' + Colors.BLUE +'*-._.-*-._.-*-._.-*-._.-*-._.-' + Colors.RESET)
 
   def main_menu(self):
     self.reset()
     print(Colors.BLUE + "-" + Colors.RESET)
-    print(Colors.BLUE + "-" + Colors.RESET + "    " + Colors.GREEN + "1-" + Colors.RESET + " Gerar anos")
-    print(Colors.BLUE + "-" + Colors.RESET + "    " + Colors.GREEN + "2-" + Colors.RESET + " Gerar contador")
-    print(Colors.BLUE + "-" + Colors.RESET + "    " + Colors.GREEN + "3-" + Colors.RESET + " Gerar arquivo")
+    print(Colors.BLUE + "-" + Colors.RESET + "    " + Colors.GREEN + "1-" + Colors.RESET + " Gerar contador")
     print(Colors.BLUE + "-" + Colors.RESET + "    " + Colors.GREEN + "0-" + Colors.RESET + " Sair")
 
 class Colors:  
