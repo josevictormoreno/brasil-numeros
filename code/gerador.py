@@ -26,7 +26,7 @@ class GeradorCsv:
 
     if op == 1:
       self.menu.reset()
-      self.data.append('1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,17,19,20,21,22,23')
+      self.data.append(self.util.get_counter())
       self.set_file(self.data)
       self.close_file()
     
@@ -43,6 +43,6 @@ class GeradorCsv:
     self.menu.reset
     print(Colors.GREEN + "    Arquivo data_base.csv criado com sucesso! " + Colors.RESET)
     self.file.close()
-    
+
 gerador = GeradorCsv()
 gerador.main()
